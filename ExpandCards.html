@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Cards</title>
+    <link rel="stylesheet" href="/Cards/style.css">
+    <script type="text/javascript">
+        const panels = document.querySelectorAll('.panel')
+
+        panels.forEach(panel => {
+            panel.addEventListener('click', () => {
+                removeActiveClasses()
+                panel.className.add('active')
+            })
+        })
+
+        function removeActiveClasses() {
+            panels.forEach(panel => {
+                panel.className.remove('active')
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel active" style="background-image: url('/Public/images/Explore.jpg');">
+            <h3>Explore the world</h3>
+        </div>
+        <div class="panel" style="background-image:url('/Public/images/forest.jpg')">
+            <h3>Wild Forest</h3>
+        </div>
+        <div class="panel" style="background-image:url('/Public/images/beach.jpg')">
+            <h3>Beauty of Beach</h3>
+        </div>
+        <div class="panel" style="background-image:url('/Public/images/city.jpg')">
+            <h3>Night view of City</h3>
+        </div>
+        <div class="panel" style="background-image:url('/Public/images/mountains.jpg')">
+            <h3>Himalayas</h3>
+        </div>
+    </div>
+</body>
+
+</html>
